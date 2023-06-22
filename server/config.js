@@ -1,12 +1,22 @@
+const certDir = `/home/enzo_francesca/vr`;
+const domain = `certs`;
+
+// const options = {
+//   key: fs.readFileSync(`${certDir}/${domain}/privkey.pem`),
+//   cert: fs.readFileSync(`${certDir}/${domain}/fullchain.pem`)
+// };
 module.exports = {
     listenIp: '0.0.0.0',
-    listenPort: 8185,
-    sslCrt: `${__dirname}/ssl/server.crt`,
-    sslKey: `${__dirname}/ssl/server.key`,
+    listenPort: 5001,
+    //sslCrt: `${__dirname}/ssl/apache-selfsigned.crt`,
+    //sslKey: `${__dirname}/ssl/apache-selfsigned.key`,
+    sslCrt: `${certDir}/${domain}/fullchain.pem`,
+    sslKey: `${certDir}/${domain}/privkey.pem`,
+
     mediasoup: {
       // Worker settings
       worker: {
-        rtcMinPort: 10000,
+        rtcMinPort: 10000, 
         rtcMaxPort: 10100,
         logLevel: 'debug',
         logTags: [

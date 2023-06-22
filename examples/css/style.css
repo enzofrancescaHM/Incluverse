@@ -1,0 +1,181 @@
+@import 'https://fonts.googleapis.com/css?family=Poppins';
+
+
+.maincontrol { 
+    position: absolute;
+    width: 500px;
+    bottom: 9px;
+    left: 9px;
+    height: 80px;
+    display: flex;
+    padding: 8px;
+    background-color: #2f4f4f9e;
+    border-top: 1px solid;
+    border-right: 3px solid;
+    border-bottom: 3px solid;
+    border-left: 1px solid;
+    border-color: #00640000;
+    z-index: 50;
+    border-radius: 24px;
+}
+
+.toolbar {
+  display:flex;
+  flex:1;
+  justify-content: space-around;
+}
+
+.toolbarbutton {
+  border: none;
+  background-color: rgba(0,0,0,0);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 48px; */
+}
+
+
+.toolbarbuttoniconcontainer{
+  position: relative;
+  border-radius: 9999px;
+  width: 48px;
+  height: 48px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-color: ghostwhite;
+  color: floralwhite;
+  background-color: rgba(0,0,0,0);
+  transition: background-color .1s ease-in-out,border-color .1s ease-in-out;
+}
+
+.toolbarbuttoninputcontainer{
+  position: relative;
+  border-radius: 9999px;
+  width: 109px;
+  height: 48px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-color: ghostwhite;
+  color: floralwhite;
+  background-color: rgba(0,0,0,0);
+  transition: background-color .1s ease-in-out,border-color .1s ease-in-out;
+}
+
+.toolbarbuttoniconcontainer:hover {
+  background-color: #1e293b;
+  color: #fff;
+}
+
+
+.toolbarbuttonlabel{
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  color:aliceblue;
+  margin-top: 8px;
+  margin-bottom: 3px;
+  white-space: nowrap;
+}
+
+.toolbarstatusindicator{
+  position:absolute;
+  top: 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
+  
+}
+
+.toolbarstatusindicatoron{
+  background-color: chartreuse;
+}
+
+.inputname {
+  width: 100px;
+  height: 24px;
+  border-radius: 13px;
+  border: 0px solid;
+  /* border-color: aqua; */
+  font-size: 18px;
+  font-family: 'Poppins';
+  background-color: transparent;
+  color: chartreuse;
+}
+
+.inputname:focus-visible{
+  border: 0px solid;
+  outline:none;
+}
+
+.textarea{
+  border: 0px solid;
+}
+
+.textarea:focus-visible{
+  border: 0px solid;
+}
+
+
+.control {
+    position: absolute;
+    width: 650px;
+    height: 60px;
+    left: 20px;
+    bottom: 20px;
+    background: #4fc3c300;
+    border: 1px solid #23232200;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99
+  }
+
+  #videoBtn,
+  #audioBtn,
+  #shareBtn,
+  #firstBtn,
+  #droneBtn,
+  #teachBtn {
+    height: 100%;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #232322;
+    border-radius: 10px;
+  }
+  
+  .mainUI
+  {
+    border: 0px solid pink; 
+    position: fixed; 
+    top: 0px;  
+    width:100%; height:100%; 
+    z-index: 1; 
+    pointer-events: none; /* allow click-through in transparent areas */
+    display: flex;
+    align-items: center;
+      justify-content: center;
+  }
+
+  .regionUI
+  {
+    border: 0px solid yellow;
+    position: absolute; 
+    display: flex;
+    flex-direction: row;
+    pointer-events: none;
+  }
+
+  .buttonUI
+  {
+    margin-top: 150px;
+    border: 0px solid lime;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    pointer-events: auto;	
+    filter: drop-shadow(0px 0px 20px white);
+  }
